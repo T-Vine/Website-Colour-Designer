@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content = "width=device-width, initial-scale = 1.0">
+        <title> Main </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+              
+    </head>
+    <body>
+        <nav>
+            <button onclick="darkMode()">Dark Mode</button>
+            <!-- <button onclick="randomText()"> Random Text </button>
+            <button onclick="randomText('red')">Red Text</button> -->
+            <!-- <form>
+                <label for="col">Text-Colour: </label>
+                <select name="colours" id="col">
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                </select>
+                <button type="submit">Select</button>
+            </form> -->
+            
+            <button onclick="revealTextButtons()">Text-Colour</button>
+            <!-- Retractable -->
+            <span class="normal">
+                <button onclick = "randomText('red')"> Red </button>
+                <button onclick = "randomText('green')"> Green </button>
+                <button onclick = "randomText('yellow')"> Yellow </button>
+                <button onclick = "randomText('orange')"> Orange </button>
+                <button onclick = "randomText('blue')"> Blue </button>
+            </span>
+            
+        </nav>
+        <p id="p"> Hello </p>
+    </body>
+</html>
