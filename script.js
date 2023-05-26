@@ -5,9 +5,15 @@ function darkMode() {
     element.classList.toggle("dark-mode");
 }
 
+function revealTextButtons() {
+    el = document.getElementsByTagName("span");
+    el[0].classList.toggle("ceaseDisplay");
+    // console.log("Running...")
+}
+
 function randomText(color) {
     el = document.getElementById("p");
-    number = Math.floor(Math.random()*4);
+    number = Math.floor(Math.random()*4); //for future functionality
     //console.log(number); for testing
     switch (color) {
         
@@ -27,7 +33,28 @@ function randomText(color) {
             el.style.color = "blue";
             break;      
     }
-    
+}
+
+function backgroundColour(color) {
+    el = document.body;
+    switch (color) {
+        case "red":
+            el.classList.toggle("red-background");
+            break;
+        case "green":
+            el.classList.toggle("green-background");
+            break;
+        case "yellow":
+            el.classList.toggle("yellow-background");
+            break;  
+        case "orange":
+            el.classList.toggle("orange-background");
+            break;
+        case "blue":
+            el.classList.toggle("blue-background");
+            break;
+    }
+    el.classList.toggle("red-colour");
 }
 /* function select() {
     selector = document.getElementById("col").value;
@@ -37,8 +64,3 @@ function randomText(color) {
 
 } */
 
-function revealTextButtons() {
-    el = document.getElementsByTagName("span");
-    el[0].classList.toggle("ceaseDisplay");
-    // console.log("Running...")
-}
