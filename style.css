@@ -9,14 +9,17 @@ body {
     background-color: black;
     color: white;
 }
-.normal {
+.normal, .normal-background {
   display: none;
 }
+
+/* For Hiding/Showing Detailed Buttons */
 .ceaseDisplay {
   display: block;
   padding-right: 10px;
   margin-inline-start: 6.8%;
 } 
+/* Backgrounds */
 .red-background {
   background-color: red;
 }

@@ -2,18 +2,24 @@
 let y = 0;
 function darkMode() {
     let element = document.body;
-    element.classList.toggle("dark-mode");
+    
+    element.classList = ("dark-mode");
 }
 
 function revealTextButtons() {
-    el = document.getElementsByTagName("span");
+    let el = document.getElementsByTagName("span");
     el[0].classList.toggle("ceaseDisplay");
-    // console.log("Running...")
+    // console.log("Running...") for testing
+}
+
+function revealBackgroundButtons() {
+    let el = document.getElementsByClassName("normal-background");
+    el[0].classList.toggle("ceaseDisplay");
 }
 
 function randomText(color) {
-    el = document.getElementById("p");
-    number = Math.floor(Math.random()*4); //for future functionality
+    let el = document.getElementById("p");
+    let number = Math.floor(Math.random()*4); //for future functionality
     //console.log(number); for testing
     switch (color) {
         
@@ -36,25 +42,25 @@ function randomText(color) {
 }
 
 function backgroundColour(color) {
-    el = document.body;
+    let el = document.body;
     switch (color) {
         case "red":
-            el.classList.toggle("red-background");
+            el.classList = ("red-background");
             break;
         case "green":
-            el.classList.toggle("green-background");
+            el.classList = ("green-background");
             break;
         case "yellow":
-            el.classList.toggle("yellow-background");
+            el.classList = ("yellow-background");
             break;  
         case "orange":
-            el.classList.toggle("orange-background");
+            el.classList = ("orange-background");
             break;
         case "blue":
-            el.classList.toggle("blue-background");
+            el.classList = ("blue-background");
             break;
     }
-    el.classList.toggle("red-colour");
+    //el.classList.toggle("red-colour");
 }
 /* function select() {
     selector = document.getElementById("col").value;
