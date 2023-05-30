@@ -2,8 +2,14 @@
 let y = 0;
 function darkMode() {
     let element = document.body;
+    if (y === 0) {
+        element.classList = ("dark-mode");
+        y = 1;
+    } else {
+        element.classList = ("body");
+        y = 0;
+    }
     
-    element.classList = ("dark-mode");
 }
 
 function revealTextButtons() {
