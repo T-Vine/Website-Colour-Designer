@@ -76,3 +76,11 @@ function backgroundColour(color) {
 
 } */
 
+document.getElementById("search-text").addEventListener("keypress", text_search);
+function text_search(event) {
+    if (event.key === "Enter") {
+        console.log("Entry"); //notifies if entry submitted (testing)
+        search_Value = document.getElementById("search-text").value;
+        
+    }
+}
