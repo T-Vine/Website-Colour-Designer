@@ -81,6 +81,6 @@ function text_search(event) {
     if (event.key === "Enter") {
         console.log("Entry"); //notifies if entry submitted (testing)
         search_Value = document.getElementById("search-text").value;
-        
+        randomText(search_Value.toLowerCase());
     }
 }
