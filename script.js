@@ -1,5 +1,10 @@
-
+//variables
 let y = 0;
+let el;
+let number; 
+let search_Value;
+let background_Value;
+
 function darkMode() {
     let element = document.body;
     if (y === 0) {
@@ -13,19 +18,19 @@ function darkMode() {
 }
 
 function revealTextButtons() {
-    let el = document.getElementsByTagName("span");
+    el = document.getElementsByTagName("span");
     el[0].classList.toggle("ceaseDisplay");
     // console.log("Running...") for testing
 }
 
 function revealBackgroundButtons() {
-    let el = document.getElementsByClassName("normal-background");
+    el = document.getElementsByClassName("normal-background");
     el[0].classList.toggle("ceaseDisplay");
 }
 
 function randomText(color) {
-    let el = document.getElementById("p");
-    let number = Math.floor(Math.random()*4); //for future functionality
+    el = document.getElementById("p");
+    number = Math.floor(Math.random()*4); //for future functionality
     //console.log(number); for testing
     switch (color) {
         
@@ -48,7 +53,7 @@ function randomText(color) {
 }
 
 function backgroundColour(color) {
-    let el = document.body;
+    el = document.body;
     switch (color) {
         case "red":
             el.classList = ("red-background");
@@ -82,5 +87,14 @@ function text_search(event) {
         console.log("Entry"); //notifies if entry submitted (testing)
         search_Value = document.getElementById("search-text").value;
         randomText(search_Value.toLowerCase());
+    }
+}
+
+document.getElementById("search-background").addEventListener("keypress", background_search);
+function background_search(event) {
+    if (event.key === "Enter") {
+        console.log("Entry"); //notifies if entry submitted (testing)
+        background_Value = document.getElementById("search-background").value;
+        backgroundColour(background_Value.toLowerCase());
     }
 }
