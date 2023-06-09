@@ -28,11 +28,12 @@ function revealBackgroundButtons() {
     el[0].classList.toggle("ceaseDisplay");
 }
 
-function randomText(color) {
+function changeText(colour) {
+    //console.log(colour);
     el = document.getElementById("p");
     number = Math.floor(Math.random()*4); //for future functionality
     //console.log(number); for testing
-    switch (color) {
+    switch (colour) { //switch statement is effectively pointless due to the default. However it is useful for debugging. 
         
         case "red":
             el.style.color = "red";
@@ -49,27 +50,32 @@ function randomText(color) {
         case "blue":
             el.style.color = "blue";
             break;      
+        default:
+            el.style.color = colour;
     }
 }
 
-function backgroundColour(color) {
+function backgroundColour(colour) {
     el = document.body;
-    switch (color) {
+    switch (colour) {
         case "red":
-            el.classList = ("red-background");
+            el.style.backgroundColor = ("red");
             break;
         case "green":
-            el.classList = ("green-background");
+            el.style.backgroundColor = ("green");
             break;
         case "yellow":
-            el.classList = ("yellow-background");
+            el.style.backgroundColor = ("yellow");
             break;  
         case "orange":
-            el.classList = ("orange-background");
+            el.style.backgroundColor = ("orange");
             break;
         case "blue":
-            el.classList = ("blue-background");
+            el.style.backgroundColor = ("blue");
             break;
+        default:
+            el.style.backgroundColor = colour;
+            //el.style.backgroundColor = colour+" !important";
     }
     //el.classList.toggle("red-colour");
 }
@@ -86,7 +92,7 @@ function text_search(event) {
     if (event.key === "Enter") {
         console.log("Entry"); //notifies if entry submitted (testing)
         search_Value = document.getElementById("search-text").value;
-        randomText(search_Value.toLowerCase());
+        changeText(search_Value.toLowerCase());
     }
 }
 
