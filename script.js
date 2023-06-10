@@ -94,10 +94,20 @@ function gradientLeft(place) {
         colours = values.split(",");
         console.log(colours[0], colours[1]);
         //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
-        document.body.style.background = "linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")";
+        el.style.background = "linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")";
     }
     else {
+        //deprecated
         el = document.querySelector("p");
+        values = document.querySelector("#linear-gradient-left-text").value;
+        colours = values.split(",");
+        console.log(colours[0], colours[1]);
+        //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
+        el.style.background = "-webkit-linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")";
+        el.style.maxWidth = "max-content";
+        el.style.backgroundClip = "text";
+        el.style.webkitTextFillColor = "transparent";
+        //el.setAttribute("style", "background: linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")")
     }
 }
 
@@ -126,3 +136,10 @@ function linear_gradient_left_search(event) {
         gradientLeft("body");
     }
 }
+/* document.querySelector("#linear-gradient-left-text").addEventListener("keypress", linear_gradient_left_search_text);
+function linear_gradient_left_search_text(event) {
+    if (event.key === "Enter") {
+        console.log("Entry for Gradient"); //notifies if entry submitted (testing)
+        gradientLeft("paragraph");
+    }
+} */
