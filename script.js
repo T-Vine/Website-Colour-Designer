@@ -31,7 +31,7 @@ function revealBackgroundButtons() {
 
 function changeText(colour) {
     //console.log(colour);
-    el = document.getElementById("p");
+    el = document.querySelector("p");
     number = Math.floor(Math.random()*4); //for future functionality
     //console.log(number); for testing
     switch (colour) { //switch statement is effectively pointless due to the default. However it is useful for debugging. 
@@ -60,22 +60,22 @@ function backgroundColour(colour) {
     el = document.body;
     switch (colour) {
         case "red":
-            el.style.backgroundColor = ("red");
+            el.style.background = ("red");
             break;
         case "green":
-            el.style.backgroundColor = ("green");
+            el.style.background = ("green");
             break;
         case "yellow":
-            el.style.backgroundColor = ("yellow");
+            el.style.background = ("yellow");
             break;  
         case "orange":
-            el.style.backgroundColor = ("orange");
+            el.style.background = ("orange");
             break;
         case "blue":
-            el.style.backgroundColor = ("blue");
+            el.style.background = ("blue");
             break;
         default:
-            el.style.backgroundColor = colour;
+            el.style.background = colour;
             //el.style.backgroundColor = colour+" !important";
     }
     //el.classList.toggle("red-colour");
@@ -87,17 +87,22 @@ function backgroundColour(colour) {
 
 
 } */
-function gradientLeft() {
-    el = document.body;
-    values = document.getElementById("linear-gradient-left").value;
-    colours = values.split(",");
-    console.log(colours[0], colours[1]);
-    //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
-    document.body.style.background = "linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")";
+function gradientLeft(place) {
+    if (place === "body") {
+        el = document.body;
+        values = document.querySelector("#linear-gradient-left").value;
+        colours = values.split(",");
+        console.log(colours[0], colours[1]);
+        //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
+        document.body.style.background = "linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")";
+    }
+    else {
+        el = document.querySelector("p");
+    }
 }
 
 
-document.getElementById("search-text").addEventListener("keypress", text_search);
+document.querySelector("#search-text").addEventListener("keypress", text_search);
 function text_search(event) {
     if (event.key === "Enter") {
         console.log("Entry"); //notifies if entry submitted (testing)
@@ -106,7 +111,7 @@ function text_search(event) {
     }
 }
 
-document.getElementById("search-background").addEventListener("keypress", background_search);
+document.querySelector("#search-background").addEventListener("keypress", background_search);
 function background_search(event) {
     if (event.key === "Enter") {
         console.log("Entry"); //notifies if entry submitted (testing)
@@ -114,10 +119,10 @@ function background_search(event) {
         backgroundColour(background_Value.toLowerCase());
     }
 }
-document.getElementById("linear-gradient-left").addEventListener("keypress", background_search);
-function background_search(event) {
+document.querySelector("#linear-gradient-left").addEventListener("keypress", linear_gradient_left_search);
+function linear_gradient_left_search(event) {
     if (event.key === "Enter") {
         console.log("Entry for Gradient"); //notifies if entry submitted (testing)
-        gradientLeft();
+        gradientLeft("body");
     }
 }
