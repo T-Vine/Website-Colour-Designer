@@ -35,3 +35,6 @@ body {
 .blue-background {
   background-color: blue;
 }
+#search-background {
+  width: 210px;
+}

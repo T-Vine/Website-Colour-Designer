@@ -4,6 +4,7 @@ let el;
 let number; 
 let search_Value;
 let background_Value;
+let colours;
 
 function darkMode() {
     let element = document.body;
@@ -86,6 +87,15 @@ function backgroundColour(colour) {
 
 
 } */
+function gradientLeft() {
+    el = document.body;
+    values = document.getElementById("linear-gradient-left").value;
+    colours = values.split(",");
+    console.log(colours[0], colours[1]);
+    //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
+    document.body.style.background = "linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")";
+}
+
 
 document.getElementById("search-text").addEventListener("keypress", text_search);
 function text_search(event) {
@@ -102,5 +112,12 @@ function background_search(event) {
         console.log("Entry"); //notifies if entry submitted (testing)
         background_Value = document.getElementById("search-background").value;
         backgroundColour(background_Value.toLowerCase());
+    }
+}
+document.getElementById("linear-gradient-left").addEventListener("keypress", background_search);
+function background_search(event) {
+    if (event.key === "Enter") {
+        console.log("Entry for Gradient"); //notifies if entry submitted (testing)
+        gradientLeft();
     }
 }
