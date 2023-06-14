@@ -110,6 +110,18 @@ function gradientLeft(place) {
         //el.setAttribute("style", "background: linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")")
     }
 }
+//radial-gradient
+function radialGradient(colours) {
+    values = "green,blue" ;
+    colours = values.split(",");
+    console.log(colours);
+    el = document.body;
+    values = document.querySelector("#linear-gradient-left").value;
+       
+    //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
+    el.style.background = "radial-gradient("+colours[0]+" 0%, "+colours[1]+")";
+
+}
 
 
 document.querySelector("#search-text").addEventListener("keypress", text_search);
@@ -142,4 +154,4 @@ function linear_gradient_left_search_text(event) {
         console.log("Entry for Gradient"); //notifies if entry submitted (testing)
         gradientLeft("paragraph");
     }
-} */
+} */ //This has been discontinued due to incorrect functionality
