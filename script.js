@@ -1,11 +1,5 @@
 //variables
-let y = 0;
-let el;
-let number; 
-let search_Value;
-let background_Value;
-let colours;
-let values;
+
 
 function darkMode() {
     let element = document.body;
@@ -115,12 +109,15 @@ function gradientLeft(place) {
 function radialGradient(colours) {
     colours = values.split(",");
     console.log(colours);
-    el = document.body;
-    values = document.querySelector("#linear-gradient-left").value;
-       
+    el = document.body; 
     //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
     el.style.background = "radial-gradient("+colours[0]+" 0%, "+colours[1]+")";
-
+}
+function devRadialGradient(input) {
+    inputs = input.split(",");
+    el = document.body;
+    el.style.background = "radial-gradient("+inputs[0]+","+inputs[1]+")";
+    console.log("radial-gradient("+inputs[0]+","+inputs[1]+")");
 }
 
 
