@@ -5,6 +5,7 @@ let number;
 let search_Value;
 let background_Value;
 let colours;
+let values;
 
 function darkMode() {
     let element = document.body;
@@ -112,7 +113,6 @@ function gradientLeft(place) {
 }
 //radial-gradient
 function radialGradient(colours) {
-    values = "green,blue" ;
     colours = values.split(",");
     console.log(colours);
     el = document.body;
@@ -146,6 +146,14 @@ function linear_gradient_left_search(event) {
     if (event.key === "Enter") {
         console.log("Entry for Gradient"); //notifies if entry submitted (testing)
         gradientLeft("body");
+    }
+}
+document.querySelector("#radial-gradient").addEventListener("keypress", radial_gradient_search);
+function radial_gradient_search(event) {
+    if (event.key === "Enter") {
+        console.log("Entry for Gradient"); //notifies if entry submitted (testing)
+        values = document.querySelector("#radial-gradient").value;
+        radialGradient(values);
     }
 }
 /* document.querySelector("#linear-gradient-left-text").addEventListener("keypress", linear_gradient_left_search_text);
