@@ -116,10 +116,31 @@ function radialGradient(colours) {
 function devRadialGradient(input) {
     inputs = input.split(",");
     el = document.body;
-    el.style.background = "radial-gradient("+inputs[0]+","+inputs[1]+")";
+    if (inputs.length == 2) {
+        inputs = inputs;
+        el.style.background = "radial-gradient("+inputs[0]+","+inputs[1]+")";
+    } else {
+        inputs = input;
+        el.style.background = "radial-gradient("+inputs+")";
+    }
+    console.log(inputs);
+    
     console.log("radial-gradient("+inputs[0]+","+inputs[1]+")");
 }
-
+function devLinearGradient(input) {
+    inputs = input.split(",");
+    el = document.body;
+    if (inputs.length == 2) {
+        inputs = inputs;
+        el.style.background = "linear-gradient("+inputs[0]+","+inputs[1]+")";
+    } else {
+        inputs = input;
+        el.style.background = "linear-gradient("+inputs+")";
+    }
+    console.log(inputs);
+    
+    console.log("linear-gradient("+inputs[0]+","+inputs[1]+")");
+}
 
 document.querySelector("#search-text").addEventListener("keypress", text_search);
 function text_search(event) {
