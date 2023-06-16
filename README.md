@@ -19,7 +19,9 @@ FAQ:
 - What future functionality is planned?
     - More inputs are planned, as well as greater styling: sorry for the bare-bones at the moment!
 - How shall I access it?
-    - You can download it and run locally, or access via
+    - You can download it and run locally, or access via [my Github Page][https://t-vine.github.io/Website-Colour-Designer/]
+- Can I contribute and use this?
+    Feel free to use this in any accordance with the MIT License. For contribution, feel free to fork and clone, then submit a pull-request. All will be reviewed and are welcome!
 
 ##Licensed with MIT. See LICENSE.md
 ###Designed With Functionality In Mind
