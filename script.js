@@ -111,7 +111,7 @@ function radialGradient(colours) {
     console.log(colours);
     el = document.body; 
     //document.body.style.background = "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) ";
-    el.style.background = "radial-gradient("+colours[0]+" 0%, "+colours[1]+")";
+    el.style.background = "radial-gradient("+colours[0]+","+colours[1]+")";
 }
 function devRadialGradient(input) {
     inputs = input.split(",");
@@ -172,6 +172,23 @@ function radial_gradient_search(event) {
         console.log("Entry for Gradient"); //notifies if entry submitted (testing)
         values = document.querySelector("#radial-gradient").value;
         radialGradient(values);
+    }
+}
+//Getting values for and adding event listeners for developer searches.
+document.querySelector("#dev-radial-gradient").addEventListener("keypress", dev_radial_gradient_search);
+function dev_radial_gradient_search(event) {
+    if (event.key === "Enter") {
+        console.log("Entry for Dev-Gradient"); //notifies if entry submitted (testing)
+        values = document.querySelector("#dev-radial-gradient").value;
+        devRadialGradient(values);
+    }
+}
+document.querySelector("#dev-linear-gradient").addEventListener("keypress", dev_linear_gradient_search);
+function dev_linear_gradient_search(event) {
+    if (event.key === "Enter") {
+        console.log("Entry for Dev-Gradient"); //notifies if entry submitted (testing)
+        values = document.querySelector("#dev-linear-gradient").value;
+        devLinearGradient(values);
     }
 }
 /* document.querySelector("#linear-gradient-left-text").addEventListener("keypress", linear_gradient_left_search_text);
