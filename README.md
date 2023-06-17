@@ -10,7 +10,7 @@ An in-production website for testing different backgrounds, text colours, etcete
 ## For Users:
 To use, simply enter the website, and use the searches or specific colours. Background and Text Colours Expect 1 input. Linear Gradients and Radial Gradients expect 2 colours, comma-seperated: e.g. 'blue,red' for a gradient with blue in the centre, turning to red.
 
-Developer Inputs expect a full entry of what is expected within a CSS File, e.g. the contents of 'radial-gradient()'. This allows more functionality and a greater variety of gradients, but is harder to use.
+Developer Inputs expect a full entry of what is expected within a CSS File: such as the contents of 'radial-gradient()'. This allows more functionality and a greater variety of gradients, but is harder to use. Example Input: "to left, #333, #333 50%, #eee 75%, #333 75%".
 
 ## For Developers:
 FAQ:
@@ -21,7 +21,7 @@ FAQ:
 - How shall I access it?
     - You can download it and run locally, or access via [my Github Page](https://t-vine.github.io/Website-Colour-Designer/)
 - Can I contribute and use this?
-    Feel free to use this in any accordance with the MIT License. For contribution, feel free to fork and clone, then submit a pull-request. All will be reviewed and are welcome!
+    Feel free to use this in any accordance with the MIT License. For contribution, feel free to fork and clone, then submit a pull-          request. All will be reviewed and are welcome!
 
-## Licensed with MIT. See LICENSE.md
-## Designed With Functionality In Mind
+### Licensed with MIT. See LICENSE.md
+### Designed With Functionality In Mind
