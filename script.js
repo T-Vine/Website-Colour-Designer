@@ -1,4 +1,4 @@
-//variables
+// Variables.
 
 
 function darkMode() {
@@ -16,7 +16,7 @@ function darkMode() {
 function revealTextButtons() {
     el = document.getElementsByTagName("span");
     el[0].classList.toggle("ceaseDisplay");
-    // console.log("Running...") for testing
+    // Console.log("Running...") for testing.
 }
 
 function revealBackgroundButtons() {
@@ -27,9 +27,9 @@ function revealBackgroundButtons() {
 function changeText(colour) {
     //console.log(colour);
     el = document.querySelector("p");
-    number = Math.floor(Math.random()*4); //for future functionality
-    //console.log(number); for testing
-    switch (colour) { //switch statement is effectively pointless due to the default. However it is useful for debugging. 
+    number = Math.floor(Math.random()*4); // For future functionality.
+    // Console.log(number); for testing.
+    switch (colour) { // Switch statement is effectively pointless due to the default. However it is useful for debugging.  
         
         case "red":
             el.style.color = "red";
@@ -105,7 +105,7 @@ function gradientLeft(place) {
         //el.setAttribute("style", "background: linear-gradient(90deg, "+colours[0]+" 0%, "+colours[1]+")")
     }
 }
-//radial-gradient
+// Radial-gradient
 function radialGradient(colours) {
     colours = values.split(",");
     console.log(colours);
@@ -154,7 +154,7 @@ function text_search(event) {
 document.querySelector("#search-background").addEventListener("keypress", background_search);
 function background_search(event) {
     if (event.key === "Enter") {
-        console.log("Entry"); //notifies if entry submitted (testing)
+        console.log("Entry"); // Notifies if entry submitted (testing).
         background_Value = document.getElementById("search-background").value;
         backgroundColour(background_Value.toLowerCase());
     }
@@ -162,23 +162,23 @@ function background_search(event) {
 document.querySelector("#linear-gradient-left").addEventListener("keypress", linear_gradient_left_search);
 function linear_gradient_left_search(event) {
     if (event.key === "Enter") {
-        console.log("Entry for Gradient"); //notifies if entry submitted (testing)
+        console.log("Entry for Gradient"); // Notifies if entry submitted (testing).
         gradientLeft("body");
     }
 }
 document.querySelector("#radial-gradient").addEventListener("keypress", radial_gradient_search);
 function radial_gradient_search(event) {
     if (event.key === "Enter") {
-        console.log("Entry for Gradient"); //notifies if entry submitted (testing)
+        console.log("Entry for Gradient"); // Notifies if entry submitted (testing).
         values = document.querySelector("#radial-gradient").value;
         radialGradient(values);
     }
 }
-//Getting values for and adding event listeners for developer searches.
+// Getting values for and adding event listeners for developer searches.
 document.querySelector("#dev-radial-gradient").addEventListener("keypress", dev_radial_gradient_search);
 function dev_radial_gradient_search(event) {
     if (event.key === "Enter") {
-        console.log("Entry for Dev-Gradient"); //notifies if entry submitted (testing)
+        console.log("Entry for Dev-Gradient"); // Notifies if entry submitted (testing).
         values = document.querySelector("#dev-radial-gradient").value;
         devRadialGradient(values);
     }
@@ -186,7 +186,7 @@ function dev_radial_gradient_search(event) {
 document.querySelector("#dev-linear-gradient").addEventListener("keypress", dev_linear_gradient_search);
 function dev_linear_gradient_search(event) {
     if (event.key === "Enter") {
-        console.log("Entry for Dev-Gradient"); //notifies if entry submitted (testing)
+        console.log("Entry for Dev-Gradient"); // Notifies if entry submitted (testing)
         values = document.querySelector("#dev-linear-gradient").value;
         devLinearGradient(values);
     }
